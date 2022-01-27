@@ -60,5 +60,8 @@ function keyHandler(event) {
     letterHandler(event.key)
 }
 
+
+
+
 selectRandomItem();
 setUnderScores();

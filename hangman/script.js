@@ -1,4 +1,4 @@
-const phrases = ["cutdown", "students", "break", "code"]
+const phrases = ["erfan", "teach", "break", "thing"]
 
 let randomItems = "";
 let clicked = [];
@@ -52,13 +52,28 @@ function letterHandeler(letter){
     }
 }
 
+function letterHandeler2(letter) {
+    letter = letter.toLowerCase();
+    clicked.indexOf(letter) === -1 ? clicked.push(letter) : null;
+    document.getElementById(letter.toUpperCase()).className = "used";
+    if (randomItems.indexOf(letter) >= 0) {
+        setUnderScores()
+        checkIfWon()
+    }else if (randomItems.indexOf(letter) === -1){
+        mistakes++;
+        checkIflost();
+        updateHangmanPicture()
+    }
+}
+
 function buttonHandeler(event) {
     letterHandeler(event.target.id)
 }
 
 function keyHandler(event) {
-    letterHandler(event.key)
+    letterHandeler2(event.key)
 }
+
 
 selectRandomItems();
 setUnderScores();
