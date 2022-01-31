@@ -1,6 +1,6 @@
 // BOM => Browser object model
 // window
-// console.log(window.innerWidthWidth)
+// console.log(window.innerWidth)
 // outerWidth & innerHeight & outerHeight
 
 // window.open("https://google.com")
