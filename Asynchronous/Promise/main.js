@@ -1,16 +1,21 @@
 console.log("start");
 
-const Promise1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log("Hi Im a promise");
-        // resolve({name : "Erfan"})
-        reject("eror!")
-    }, 3000)
-})
-
-Promise1
+function userData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({name : "Erfan"})
+        }, 3000)
+    })
+    
+}
+userData()
     .then(user => console.log(user))
     .catch(err => console.log(err))
+
+// async function displayData() {
+//     const tset = await userData();
+//     console.log(tset)
+// }
 
 
 console.log("End")
